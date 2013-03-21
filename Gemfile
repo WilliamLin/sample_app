@@ -7,6 +7,8 @@ group :development, :test do
   gem 'rspec-rails', '2.11.0'
   gem 'guard-rspec', '1.2.1'
   gem 'bootstrap-sass', '2.1'
+  gem 'annotate', '2.5.0'
+  gem 'bcrypt-ruby', '3.0.1'
 end
 
 # Gems used only for assets and not required
