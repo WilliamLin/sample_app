@@ -14,6 +14,7 @@ describe User do
   it { should respond_to(:password_digest) }
   it { should respond_to(:password) }
   it { should respond_to(:password_confirmation) }
+  it { should respond_to(:authenticate) }
 
  
   
@@ -49,17 +50,7 @@ describe User do
 	  end
 	  
 	end
-  require 'spec_helper'
+  
 
-describe "User pages" do
-
-  subject { page }
-
-  describe "signup page" do
-    before { visit signup_path }
-
-    it { should have_selector('h1',    text: 'Sign up') }
-    it { should have_selector('title', text: 'Sign up') }
-  end
-
+  
 end

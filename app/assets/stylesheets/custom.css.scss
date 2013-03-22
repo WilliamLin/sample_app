@@ -3,6 +3,7 @@
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
+$blue: #00a5db;
 
 /* universal */
 
@@ -22,6 +23,9 @@ textarea {
   resize: vertical;
 }
 
+navbar-inner,navbar,navbar-fixed-top{
+  background-color: $blue
+}
 .center {
   text-align: center;
   h1 {
@@ -106,7 +110,7 @@ footer {
 aside {
   section {
     padding: 10px 0;
-    border-top: 1px solid $grayLighter;
+    border-top: 1px solid $blue;
     &:first-child {
       border: 0;
       padding-top: 0;
@@ -153,5 +157,13 @@ input {
   float: left;
   margin-right: 10px;
   }
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing(content-box);
+ }
 }
 

@@ -14,6 +14,13 @@ describe "profile page" do
   it { should have_selector('title', text: user.name) }
 end
 
+describe "signup page" do
+    before { visit signup_path }
+
+    it { should have_selector('h1',    text: 'Sign up') }
+    it { should have_selector('title', text: 'Sign up') }
+end
+
 describe "signup" do
 
     before { visit signup_path }
@@ -38,6 +45,11 @@ describe "signup" do
         expect { click_button submit }.to change(User, :count).by(1)
       end
     end
+  end
+
+  describe "remember token" do
+    before { @user.save }
+    its(:remember_token) { should_not be_blank }
   end
   
 end
